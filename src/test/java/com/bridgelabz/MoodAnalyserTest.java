@@ -8,15 +8,15 @@ import static org.junit.jupiter.api.Assertions.assertSame;
 public class MoodAnalyserTest {
     @Test
     public void givenSadMoodShouldReturnSad() {
-        MoodAnalyser analyse = new MoodAnalyser();
-        String mood = analyse.analyseMood("I am in sad mood");
+        MoodAnalyser analyse = new MoodAnalyser("I am in sad mood");
+        String mood = analyse.analyseMood();
         assertSame("SAD", mood);
     }
 
     @Test
     public void givenAnyMoodShouldReturnHappy() {
-        MoodAnalyser analyse = new MoodAnalyser();
-        String mood = analyse.analyseMood("I am in any mood");
+        MoodAnalyser analyse = new MoodAnalyser("I am in any mood");
+        String mood = analyse.analyseMood();
         assertSame("HAPPY", mood);
     }
 }
