@@ -1,5 +1,4 @@
 package com.bridgelabz;
-
 import com.bridgelabz.MoodAnalyser;
 import org.junit.jupiter.api.Test;
 
@@ -11,12 +10,5 @@ public class MoodAnalyserTest {
         MoodAnalyser analyse = new MoodAnalyser("I am in sad mood");
         String mood = analyse.analyseMood();
         assertSame("SAD", mood);
-    }
-
-    @Test
-    public void givenAnyMoodShouldReturnHappy() {
-        MoodAnalyser analyse = new MoodAnalyser("I am in any mood");
-        String mood = analyse.analyseMood();
-        assertSame("HAPPY", mood);
     }
 }
